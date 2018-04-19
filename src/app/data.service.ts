@@ -4,7 +4,8 @@ import {HttpClient } from '@angular/common/http';
 @Injectable()
 export class DataService {
 
-  apiUrl = 'http://ailabdev.ey.net/leasereviewer/api/lease/';
+  // apiUrl = 'http://ailabdev.ey.net/leasereviewer/api/lease/'; // still down...
+  apiUrl = 'https://ailabdev.eyua.net/leasereviewer/api/lease/';
 
   constructor(private http: HttpClient) { }
 
