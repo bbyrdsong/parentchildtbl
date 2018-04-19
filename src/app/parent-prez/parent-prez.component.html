@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Date Modified</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let parent of parents">
+        <td>
+          <button class="button button-info" *ngIf="parent.children.length > 0" (click)="loadChildren(parent.id)">
+            View Children
+          </button>
+        </td>
+        <td>{{parent.id}}</td>
+        <td>{{parent.lease_file_name}}</td>
+        <td>{{parent.date_modified | date:'MM/dd/yy hh:mm a'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
