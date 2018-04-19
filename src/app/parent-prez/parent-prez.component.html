@@ -9,9 +9,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let parent of parents">
+      <tr *ngFor="let parent of parents; let i = index" [style.background]="parent.master ? '#ddd' : ''">
         <td>
-          <button class="button button-info" *ngIf="parent.children.length > 0" (click)="loadChildren(parent.id)">
+          <button class="button button-info" *ngIf="parent.children && parent.children.length > 0" (click)="loadChildren(parent.id, i)">
             View Children
           </button>
         </td>

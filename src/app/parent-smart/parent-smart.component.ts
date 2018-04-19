@@ -36,9 +36,9 @@ export class ParentSmartComponent implements OnInit {
   }
 
   loadChildren(e) {
-    const children = this.parents.filter(p => p.id === e).map(p => p.children)
+    const children = this.parents.filter(p => p.id === e.parentId).map(p => p.children)
 
-    console.log(children)
+    this.parents.splice(e.index + 1, 0, children[0][0]);
   }
 
   showTrueParents(e) {

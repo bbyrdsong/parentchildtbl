@@ -17,7 +17,7 @@ export class ParentPrezComponent implements OnInit {
   ngOnInit() {
   }
 
-  loadChildren(parentId) {
-    this.childHandler.emit(parentId)
+  loadChildren(parentId, index) {
+    this.childHandler.emit({parentId, index})
   }
 }
