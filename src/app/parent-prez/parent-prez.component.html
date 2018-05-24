@@ -13,7 +13,7 @@
       <tr *ngFor="let parent of parents; let i = index" [style.background]="parent.master ? '#ddd' : ''">
         <td>
           <button class="btn btn-info" *ngIf="parent.children && parent.children.length > 0" (click)="handleClick(parent.id, i, $event)">
-            {{buttonName}}
+            {{buttonName}} <!-- TODO: set buttonName based on selected parent -->
           </button>
         </td>
         <td>{{parent.id}}</td>
