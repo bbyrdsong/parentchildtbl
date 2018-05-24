@@ -1,5 +1,5 @@
 <div class="container">
     <h1>Lease List</h1>
-    <input type="checkbox" name="chkParents" (change)="showTrueParents($event)"> Show True Parents
-    <app-parent-prez [parents]="parents" (childHandler)="loadChildren($event)"></app-parent-prez>
+    <input type="checkbox" name="chkParents" (change)="showTrueParents($event)"> Show Parents with Children Only
+    <app-parent-prez [parents]="parents" [buttonName]="buttonName" (childHandler)="handleClick($event)"></app-parent-prez>
 </div>

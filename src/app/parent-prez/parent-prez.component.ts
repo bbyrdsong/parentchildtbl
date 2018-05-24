@@ -8,6 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ParentPrezComponent implements OnInit {
   @Input()
   parents: any[];
+  @Input()
+  buttonName: string;
 
   @Output()
   childHandler = new EventEmitter<any>();
@@ -17,7 +19,7 @@ export class ParentPrezComponent implements OnInit {
   ngOnInit() {
   }
 
-  loadChildren(parentId, index) {
-    this.childHandler.emit({parentId, index})
+  handleClick(parentId, index, $event) {
+    this.childHandler.emit({parentId, index, buttonName: $event.target.innerText});
   }
 }
